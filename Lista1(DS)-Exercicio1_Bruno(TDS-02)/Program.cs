@@ -226,6 +226,39 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
 
                             break;
                         }
+                    case 8:
+                        {
+                            Console.Clear();
+
+                            /*
+                             * 8. Escreva um programa para ler o salário mensal atual de um funcionário e
+                             * aplicar um percentual de reajuste, calcular e escrever o valor do novo salário.                         
+                             */
+                            clas.CabecalhoEx8();
+                            clas.Salario = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Informe o percentual do reajuste (%): ");
+                            clas.Reajuste = double.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("O salário com o reajuste ficou: " + clas.PercDeReajuste(clas.Salario, clas.Reajuste).ToString("C")); // ToString para mostrar o valor monetario 
+                            Console.WriteLine();
+                            break;
+                        }
+                    case 9:
+                        {
+                            Console.Clear();
+                            /*
+                             * 9. O custo de um carro novo ao consumidor é a soma do custo de fábrica com
+                             * a porcentagem do distribuidor e dos impostos (aplicados ao custo de fábrica).
+                             * Supondo que o percentual do distribuidor seja de 28% e os impostos de 45%,
+                             * escrever um programa para ler o custo de fábrica de um carro, calcular e
+                             * escrever o custo final ao consumidor.                         
+                             */
+                            clas.CabecalhoEx9();
+                            clas.Valor = double.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("O valor final do veículo após a a porcentagem do distribuidor e dos impostos: "+clas.valorVeiculo(clas.Valor).ToString("C"));
+                        }
+                        break;
                     default:
                         {
                             Console.WriteLine("Opção inválida!");

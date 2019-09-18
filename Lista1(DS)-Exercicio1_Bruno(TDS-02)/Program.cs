@@ -257,8 +257,40 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
                             clas.Valor = double.Parse(Console.ReadLine());
                             Console.WriteLine();
                             Console.WriteLine("O valor final do veículo após a a porcentagem do distribuidor e dos impostos: "+clas.valorVeiculo(clas.Valor).ToString("C"));
+                            break;
                         }
-                        break;
+                    case 10:
+                        {
+                            Console.Clear();
+                            clas.CabecalhoEx10();
+                            /*
+                             * 10. Uma revendedora de carros usados paga a seus funcionários vendedores
+                             * um salário fixo por mês, mais uma comissão também fixa para cada carro
+                             * vendido e mais 5% do valor das vendas por ele efetuadas. Escrever um
+                             * programa que leia o número de carros por ele vendidos, o valor total de suas
+                             * vendas, o salário fixo e o valor que ele recebe por carro vendido. Calcule e
+                             * escreva o salário final do vendedor.                             
+                             */
+
+                            // valor carro * qtd (tot venda)
+                            // 
+                            clas.QtdCarVend = int.Parse(Console.ReadLine());
+
+                            Console.WriteLine("Informe o(s) valor(es) do(s) veículo(s) R$: ");
+                            clas.ValorCarro = double.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("RESULTADO:");
+                            Console.WriteLine("O valor total das vendas: " +clas.ValorTotVend(clas.ValorCarro,clas.QtdCarVend).ToString("C"));
+                            Console.WriteLine();
+                            Console.WriteLine("O salário fixo do vendedor: "+clas.SalarioVend.ToString("C"));
+                            Console.WriteLine();
+                            Console.WriteLine("O valor recebido por cada carro: "+clas.ValorPorCarro(clas.SalarioVend,clas.Comissao,clas.ValorCarro).ToString("C"));
+                            Console.WriteLine();
+                            Console.WriteLine("O salário final do vendedor foi: "+(clas.ValorPorCarro(clas.SalarioVend, clas.Comissao, clas.ValorCarro) * clas.QtdCarVend).ToString("C"));
+                            Console.WriteLine();
+                            break;
+                        }
+                        
                     default:
                         {
                             Console.WriteLine("Opção inválida!");

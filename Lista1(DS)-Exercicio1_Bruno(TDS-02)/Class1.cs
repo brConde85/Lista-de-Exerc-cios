@@ -29,6 +29,13 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         // atributos ex 9
         private double valor;
 
+        // atributos ex 10
+        private double salarioVend = 2000;
+        private double comissao = 0.05;
+        private int qtdCarVend;
+        private double valorCarro;
+        
+
         // encapsulamento dos atributos (Getters e Setters)
         public double Reais { get => reais; set => reais = value; }
         public double Dolar { get => dolar; set => dolar = value; }
@@ -43,6 +50,10 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         public double Salario { get => salario; set => salario = value; }
         public double Reajuste { get => reajuste; set => reajuste = value; }
         public double Valor { get => valor; set => valor = value; }
+        public double SalarioVend { get => salarioVend; set => salarioVend = value; }
+        public double Comissao { get => comissao; set => comissao = value; }
+        public int QtdCarVend { get => qtdCarVend; set => qtdCarVend = value; }
+        public double ValorCarro { get => valorCarro; set => valorCarro = value; }
 
 
         // metodos
@@ -111,7 +122,16 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             double y = 0.45,z = 0.28;
             return x = x+(x*y)+(x*z);
         }
-
+        public double ValorTotVend(double valor, int qtd)
+        {//total de vendas
+            return valor*qtd;
+        }
+        public double ValorPorCarro(double sal,double coms,double valCar)
+        {
+            sal = 2000;
+            coms = 0.05;
+            return sal+(valCar*coms);
+        }
 
         // cabecalhos dos exercicios
         public void CabecalhoEx1()
@@ -170,6 +190,14 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("========================================================================================");
             Console.WriteLine("Informe o custo de fábrica do novo veículo R$: ");
         }
+        public void CabecalhoEx10()
+        {
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine("|     PROGRAMA PARA CÁLCULAR O SALÁRIO FINAL DO VENDEDOR E O VALOR TOTAL DE VENDAS     |");
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine("Informe o número de veículo(s) vendido(s): ");
+
+        }
 
 
 
@@ -192,9 +220,10 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("| 4 - Calcular e escrever o valor do novo salário com reajuste de 6%                   |");
             Console.WriteLine("| 5 - Cálculo de investimento na poupança com taxa de 0,049 a.m.                       |");
             Console.WriteLine("| 6 - Cálculo de quantos dias uma pessoa possui de vida                                |");
-            Console.WriteLine("| 7 - Cálcular e exibir o total de eleitores de uma cidade e a porcentagem de votos    |");
-            Console.WriteLine("| 8 - Cálcular o reajuste do salário com base em informações adicionadas pelo usuário  |");
+            Console.WriteLine("| 7 - Calcular e exibir o total de eleitores de uma cidade e a porcentagem de votos    |");
+            Console.WriteLine("| 8 - Calcular o reajuste do salário com base em informações adicionadas pelo usuário  |");
             Console.WriteLine("| 9 - Ler o custo de fábrica de um carro, calcular eescrever o custo final             | ");
+            Console.WriteLine("|10 - Calcular o salário final do funcionário de uma revendedora de carros usados      | ");
             Console.WriteLine("========================================================================================");
             Console.WriteLine("Escolha uma das opções para visitar o exercicio: ");
 

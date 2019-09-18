@@ -290,6 +290,26 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
                             Console.WriteLine();
                             break;
                         }
+                    case 11:
+                        {
+                            Console.Clear();
+                            /*
+                            * 11. A Loja Mamão com Açúcar está vendendo seus produtos em 5 (cinco)
+                            * prestações sem juros. Faça um programa que receba um valor de uma compra
+                            * e mostre o valor das prestações.                             
+                            */
+                            clas.CabecalhoEx11();
+                            clas.Valor = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Informe o número de parcelas que deseja dividir(Sugestão '5'): ");
+                            clas.Qtd = int.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("O valor das " + clas.Qtd + " parcelas ficou: "+clas.Parcelas(clas.Valor,clas.Qtd).ToString("C")+" por mês");
+                            Console.WriteLine();
+
+
+                           
+                            break;
+                        }
                         
                     default:
                         {

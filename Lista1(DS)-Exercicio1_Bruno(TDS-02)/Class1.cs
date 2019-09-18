@@ -26,8 +26,9 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         private int totalHab;
         private int votosVal, votosNul, votosBran;
 
-        // atributos ex 9
+        // atributos ex 9 e 11
         private double valor;
+        private int qtd;
 
         // atributos ex 10
         private double salarioVend = 2000;
@@ -54,6 +55,7 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         public double Comissao { get => comissao; set => comissao = value; }
         public int QtdCarVend { get => qtdCarVend; set => qtdCarVend = value; }
         public double ValorCarro { get => valorCarro; set => valorCarro = value; }
+        public int Qtd { get => qtd; set => qtd = value; }
 
 
         // metodos
@@ -132,6 +134,10 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             coms = 0.05;
             return sal+(valCar*coms);
         }
+        public double Parcelas(double val, int qtd)
+        {
+            return val/qtd;
+        }
 
         // cabecalhos dos exercicios
         public void CabecalhoEx1()
@@ -198,6 +204,15 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("Informe o número de veículo(s) vendido(s): ");
 
         }
+        public void CabecalhoEx11()
+        {
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine("|             PROGRAMA PARA CÁLCULAR AS PARCELAS DA LOJA MAMÃO COM AÇÚCAR              |");
+            Console.WriteLine("========================================================================================");
+            Console.WriteLine("Informe o valor da compra R$: ");
+
+        }
+
 
 
 
@@ -224,6 +239,8 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("| 8 - Calcular o reajuste do salário com base em informações adicionadas pelo usuário  |");
             Console.WriteLine("| 9 - Ler o custo de fábrica de um carro, calcular eescrever o custo final             | ");
             Console.WriteLine("|10 - Calcular o salário final do funcionário de uma revendedora de carros usados      | ");
+            Console.WriteLine("|11 - Exibir o número de parcelas da loja Mamão com Açúcar                             | ");
+            Console.WriteLine("|12 -  | ");
             Console.WriteLine("========================================================================================");
             Console.WriteLine("Escolha uma das opções para visitar o exercicio: ");
 

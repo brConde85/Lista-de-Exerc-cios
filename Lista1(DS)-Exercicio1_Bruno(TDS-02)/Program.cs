@@ -304,13 +304,41 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
                             clas.Qtd = int.Parse(Console.ReadLine());
                             Console.WriteLine();
                             Console.WriteLine("O valor das " + clas.Qtd + " parcelas ficou: "+clas.Parcelas(clas.Valor,clas.Qtd).ToString("C")+" por mês");
-                            Console.WriteLine();
-
-
-                           
+                            Console.WriteLine();                           
                             break;
                         }
-                        
+                    case 12:
+                        {
+                            /*
+                             * 12. Faça um algoritmo que receba o preço de custo de um produto e mostre o
+                             * valor de venda. Sabe-se que o preço de custo receberá um acréscimo de
+                             * acordo com um percentual informado pelo usuário.
+                             */
+                            Console.Clear();
+                            clas.CabecalhoEx12();
+                            clas.Valor = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Informe o percentual de lucro que deseja receber (%):");
+                            clas.Reajuste = double.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("O valor do produto após o reajuste ficou: "+clas.PercDeReajuste(clas.Valor,clas.Reajuste).ToString("C"));
+                            Console.WriteLine();
+                            break;
+                        }
+                    case 13:
+                        {
+                            Console.Clear();
+                            /*
+                             * 13. A padaria Hotpão vende uma certa quantidade de pães franceses e uma
+                             * quantidade de broas a cada dia. Cada pãozinho custa R$ 0,50 e a broa custa
+                             * R$ 4,50. Ao final do dia, o dono quer saber quanto arrecadou com a venda dos
+                             * pães e broas (juntos), e quanto deve guardar numa conta de poupança (10%
+                             * do total arrecadado). Você foi contratado para fazer os cálculos para o dono.
+                             * Com base nestes fatos, faça um programa para ler as quantidades de pães e
+                             * de broas, e depois calcular os dados solicitados.
+                             */
+
+                            break;
+                        }
                     default:
                         {
                             Console.WriteLine("Opção inválida!");

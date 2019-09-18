@@ -117,7 +117,7 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         }
         public double PercDeReajuste(double x, double y)
         {// calculo do novo salario com o reajuste
-             return x = x+(x*(y/100));
+             return x+(x*(y/100));
         }
         public double valorVeiculo(double x)
         {// cálculo para valor final do veículo
@@ -212,6 +212,15 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("Informe o valor da compra R$: ");
 
         }
+        public void CabecalhoEx12()
+        {
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("| PROGRAMA ONDE PREÇO DO PRODUTO TERÁ UM ACRESCIMO DE ACORDO COM O PERCENTUAL INFORMADO |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("Informe o valor de custo do Produto R$: ");
+
+        }
+
 
 
 
@@ -240,7 +249,7 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("| 9 - Ler o custo de fábrica de um carro, calcular eescrever o custo final             | ");
             Console.WriteLine("|10 - Calcular o salário final do funcionário de uma revendedora de carros usados      | ");
             Console.WriteLine("|11 - Exibir o número de parcelas da loja Mamão com Açúcar                             | ");
-            Console.WriteLine("|12 -  | ");
+            Console.WriteLine("|12 - Programa para receber um percentual de aumento para um produto vvvvv             | ");
             Console.WriteLine("========================================================================================");
             Console.WriteLine("Escolha uma das opções para visitar o exercicio: ");
 

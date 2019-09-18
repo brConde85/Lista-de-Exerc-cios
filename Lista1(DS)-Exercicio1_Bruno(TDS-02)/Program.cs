@@ -336,7 +336,50 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
                              * Com base nestes fatos, faça um programa para ler as quantidades de pães e
                              * de broas, e depois calcular os dados solicitados.
                              */
-
+                            clas.CabecalhoEx13();
+                            clas.Qtd = int.Parse(Console.ReadLine());
+                            Console.WriteLine("Informe a quantidade de broas vendidas: ");
+                            clas.QtdBr = int.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("O valor de depóstito 10%: "+ (clas.totalVendas(clas.Qtd, clas.QtdBr)*(0.10)).ToString("C"));
+                            Console.WriteLine("O total de vendas foi :"+ clas.totalVendas(clas.Qtd,clas.QtdBr).ToString("C"));
+                            Console.WriteLine();
+                            break;
+                        }
+                    case 14:
+                        {
+                            Console.Clear();
+                            /*
+                             * 14. Um motorista deseja colocar no seu tanque X reais de gasolina. Escreva
+                             * um programa para ler o preço do litro da gasolina e o valor do pagamento, e
+                             * exibir quantos litros ele conseguiu colocar no tanque.
+                             */
+                            clas.CabecalhoEx14();
+                            clas.ValorCarro = double.Parse(Console.ReadLine());
+                            Console.WriteLine("Informe o valor do litro da gasolina: ");
+                            clas.Valor = double.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("Com esse valor é possível colocar em seu tanque: "+ clas.TotalGas(clas.ValorCarro,clas.Valor).ToString("C"));
+                            Console.WriteLine();
+                            break;
+                        }
+                    case 15:
+                        {
+                            /*
+                             * 15. Programa par perfeito. Faça um programa em que o usuário precise digitar
+                             * um número de 1 até 10. Agora o outro usuário digita o segundo número. Se o
+                             * número do primeiro usuário for igual ao do segundo escreva “Esse é seu par
+                             * perfeito” Se os números forem diferentes escreva “Afaste-se do seu inimigo”
+                             */
+                            Console.Clear();
+                            clas.CabecalhoEx15();
+                            clas.Qtd = int.Parse(Console.ReadLine());
+                            Console.WriteLine("'Agora seu par' informe um número entre (1 e 10): ");
+                            clas.QtdBr = int.Parse(Console.ReadLine());
+                            Console.WriteLine();
+                            Console.WriteLine("RESULTADO DO TESTE:");
+                            Console.WriteLine(clas.ParPerf(clas.Qtd, clas.QtdBr));
+                            Console.WriteLine();
                             break;
                         }
                     default:

@@ -26,11 +26,11 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         private int totalHab;
         private int votosVal, votosNul, votosBran;
 
-        // atributos ex 9 e 11
+        // atributos ex 9, 11, 13 e 14
         private double valor;
-        private int qtd;
+        private int qtd,qtdBr;
 
-        // atributos ex 10
+        // atributos ex 10 e 14
         private double salarioVend = 2000;
         private double comissao = 0.05;
         private int qtdCarVend;
@@ -56,6 +56,7 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         public int QtdCarVend { get => qtdCarVend; set => qtdCarVend = value; }
         public double ValorCarro { get => valorCarro; set => valorCarro = value; }
         public int Qtd { get => qtd; set => qtd = value; }
+        public int QtdBr { get => qtdBr; set => qtdBr = value; }
 
 
         // metodos
@@ -137,6 +138,30 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
         public double Parcelas(double val, int qtd)
         {
             return val/qtd;
+        }
+        public double totalVendas(double paes,double broa)
+        {
+            // total de vendas padaria
+            double valorP = 0.50, valorB = 4.50;
+            return (paes*valorP)+(broa*valorB);
+        }
+        public double TotalGas (double x,double y)
+        {
+            return x*y;
+        }
+        public bool ParPerf(int x,int y)
+        {
+            if(x == y)
+            {
+                Console.WriteLine("Esse é seu par perfeito!!!  =D");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("Afaste-se do seu inimigo!!! =(");
+                return false;
+            }
+            
         }
 
         // cabecalhos dos exercicios
@@ -220,6 +245,44 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("Informe o valor de custo do Produto R$: ");
 
         }
+        public void CabecalhoEx13()
+        {
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|                                   SISTEMA HOT PÃO                                     |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|         Este sistema permite visualizar o total ganho ao fnal do dia e informar       |");
+            Console.WriteLine("|                            o valor que deve ser depositado                            |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("Informe a quatidade de pães vendida: ");
+            
+
+        }
+        public void CabecalhoEx14()
+        {
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|                                 SISTEMA POSTO DE GASOLINA                             |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|     Este sistema permite ler o preço do litro da gasolina e o valor do pagamento      | ");
+            Console.WriteLine("|                  e exibir quantos litros ele conseguiu colocar no tanque              |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("Informe  o valor a ser gasto: ");
+
+
+        }
+        public void CabecalhoEx15()
+        {
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|                                 PROGRAMA PAR PERFEITO                                 |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("|     Você e seu par devem inserir um número entre 1 e 10. Se ambos forem iguais        | ");
+            Console.WriteLine("|                            você descobriu seu par perfeito                            |");
+            Console.WriteLine("=========================================================================================");
+            Console.WriteLine("Informe um número(entre 1 e 10): ");
+
+
+        }
+
+
 
 
 
@@ -249,7 +312,10 @@ namespace Lista1_DS__Exercicio1_Bruno_TDS_02_
             Console.WriteLine("| 9 - Ler o custo de fábrica de um carro, calcular eescrever o custo final             | ");
             Console.WriteLine("|10 - Calcular o salário final do funcionário de uma revendedora de carros usados      | ");
             Console.WriteLine("|11 - Exibir o número de parcelas da loja Mamão com Açúcar                             | ");
-            Console.WriteLine("|12 - Programa para receber um percentual de aumento para um produto vvvvv             | ");
+            Console.WriteLine("|12 - Programa para receber um percentual de aumento para um produto                   | ");
+            Console.WriteLine("|13 - Programa para ler as quantidades de pães e de broas, e depois calcular os dados  | ");
+            Console.WriteLine("|14 - Programa para visualizar a quantidade de gasolina pode ser inserida              | ");
+            Console.WriteLine("|15 - Programa par perfeito                                                            | ");
             Console.WriteLine("========================================================================================");
             Console.WriteLine("Escolha uma das opções para visitar o exercicio: ");
 
